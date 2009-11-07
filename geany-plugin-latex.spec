@@ -2,7 +2,7 @@ Summary:	Geany LaTeX plugin
 Summary(pl.UTF-8):	wtyczka Geany dla LaTeXa
 Name:		geany-plugin-latex
 Version:	0.4
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://frank.uvena.de/files/geany/geanylatex-%{version}.tar.gz
@@ -11,10 +11,11 @@ URL:		http://frank.uvena.de/en/Geany/geanylatex/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	geany-devel >= 0.16
-BuildRequires:	gettext
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2:2.8
 BuildRequires:	intltool
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.198
 Requires:	geany >= 0.16
 Requires:	tetex
