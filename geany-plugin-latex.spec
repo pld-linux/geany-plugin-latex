@@ -1,8 +1,9 @@
 Summary:	Geany LaTeX plugin
+Summary(de.UTF-8):	LaTeX Plugin für Geany
 Summary(pl.UTF-8):	wtyczka Geany dla LaTeXa
 Name:		geany-plugin-latex
 Version:	0.4
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Libraries
 Source0:	http://frank.uvena.de/files/geany/geanylatex-%{version}.tar.gz
@@ -18,7 +19,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.198
 Requires:	geany >= 0.16
-Requires:	tetex
+Suggests:	tetex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
@@ -37,6 +38,19 @@ It implements a couple of mayby useful functions:
       recognising selections
     - Shortcuts for inserting \item and \newline
     - Toolbar with often used format options
+
+%description -l de.UTF-8
+GeanyLaTeX ist ein Plugin für Geany, das bei der Arbeit mit
+LaTeX-Dateien helfen soll. 
+Dabei implementiert es eine Reihe von nützlichen Funktionen
+    - Dialog zum einfachen Erstellen von typischen Dokumenten
+    - Unterstützung beim Einfügen von \label und Referenzen wie \ref und
+      \pageref
+    - Hilfe beim Einfügen und Ersetzen von Sonderzeichen
+    - Einfaches Einfügen von Formtierungen wie \texttt über Menü bzw.
+      Tastendruck
+    - Einfügen von Umgebung über Das Menü bzw. Tastendruck
+    - Werkzeugleiste mit oft genutzten Formatierungen
 
 %description -l pl.UTF-8
 Geany LaTeX jest małą wtyczką, która udostępnia wsparcie LaTeXa w
