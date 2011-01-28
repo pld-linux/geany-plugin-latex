@@ -26,49 +26,46 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Geany LaTeX is a little plugin to improve support of LaTeX on Geany.
 It implements a couple of mayby useful functions:
-    - Wizard to create new LaTeX documents in a fast and easy way with a
-      bunch of templates available
-    - A front end for add labels \label and references \ref and \pageref
-      with getting suggestion from aux file of document
-    - Inserting special characters through menu
-    - Help entering the right fields for BibTeX entries by providing
-      templates
-    - Easy inserting format patterns like \texttt through menu
-    - Support on inserting environments by offering an dialog and
-      recognising selections
-    - Shortcuts for inserting \item and \newline
-    - Toolbar with often used format options
+- Wizard to create new LaTeX documents in a fast and easy way with a
+  bunch of templates available
+- A front end for add labels \label and references \ref and \pageref
+  with getting suggestion from aux file of document
+- Inserting special characters through menu
+- Help entering the right fields for BibTeX entries by providing
+  templates
+- Easy inserting format patterns like \texttt through menu
+- Support on inserting environments by offering an dialog and
+  recognising selections
+- Shortcuts for inserting \item and \newline
+- Toolbar with often used format options
 
 %description -l de.UTF-8
 GeanyLaTeX ist ein Plugin für Geany, das bei der Arbeit mit
 LaTeX-Dateien helfen soll. 
 Dabei implementiert es eine Reihe von nützlichen Funktionen
-    - Dialog zum einfachen Erstellen von typischen Dokumenten
-    - Unterstützung beim Einfügen von \label und Referenzen wie \ref und
-      \pageref
-    - Hilfe beim Einfügen und Ersetzen von Sonderzeichen
-    - Einfaches Einfügen von Formtierungen wie \texttt über Menü bzw.
-      Tastendruck
-    - Einfügen von Umgebung über Das Menü bzw. Tastendruck
-    - Werkzeugleiste mit oft genutzten Formatierungen
+- Dialog zum einfachen Erstellen von typischen Dokumenten
+- Unterstützung beim Einfügen von \label und Referenzen wie \ref und
+  \pageref
+- Hilfe beim Einfügen und Ersetzen von Sonderzeichen
+- Einfaches Einfügen von Formtierungen wie \texttt über Menü bzw.
+  Tastendruck
+- Einfügen von Umgebung über Das Menü bzw. Tastendruck
+- Werkzeugleiste mit oft genutzten Formatierungen
 
 %description -l pl.UTF-8
 Geany LaTeX jest małą wtyczką, która udostępnia wsparcie LaTeXa w
 Geany. Implementuje wiele być może przydatnych funkcji:
-    - czarodziej pozwala stworzyć nowy dokument LaTeXa szybko i w łatwy
-      sposób, dzięki wielu dostępnym szablonom
-    - interfejs użytkownika dodaje etykiety \label i referencje \ref oraz
-      \pageref, dzięki sugestiom z pliku aux
-    - wstawianie znaków specjalnych z menu
-    - pomaga poprawnie wypełniać pola BibTeX dzięki szablonom
-    - proste wstawianie formatowania, jak na przykład \texttt, przez menu
-    - wsparcie środowiska przy pisaniu dzięki wyświetlaniu opcji wyboru
-      oraz jego zatwierdzeniu
-    - skróty dla wstawiania \item i \newline
-    - pasek narzędzi z często używanymi opcjami formatowania
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+- czarodziej pozwala stworzyć nowy dokument LaTeXa szybko i w łatwy
+  sposób, dzięki wielu dostępnym szablonom
+- interfejs użytkownika dodaje etykiety \label i referencje \ref oraz
+  \pageref, dzięki sugestiom z pliku aux
+- wstawianie znaków specjalnych z menu
+- pomaga poprawnie wypełniać pola BibTeX dzięki szablonom
+- proste wstawianie formatowania, jak na przykład \texttt, przez menu
+- wsparcie środowiska przy pisaniu dzięki wyświetlaniu opcji wyboru
+  oraz jego zatwierdzeniu
+- skróty dla wstawiania \item i \newline
+- pasek narzędzi z często używanymi opcjami formatowania
 
 %prep
 %setup -q -n geanylatex-%{version}
@@ -91,6 +88,9 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang geanylatex
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files -f geanylatex.lang
 %defattr(644,root,root,755)
